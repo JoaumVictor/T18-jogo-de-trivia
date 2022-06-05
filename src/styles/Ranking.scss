@@ -1,0 +1,111 @@
+.ranking-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  width: 100vw;
+
+  .history-card {
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 16px;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.5s;
+    justify-content: space-evenly;
+    width: 30%;
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.box-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .gif {
+    animation: tremidinha 1s infinite;
+    border-radius: 16px;
+    margin-right: 30px;
+    transition: 60s;
+    width: 60px;
+
+    &:hover {
+      width: 1000px;
+      float: left;
+    } 
+  }
+
+  button {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.5s;
+    height: 40px;
+    width: 100px;
+  }
+  .play-again {
+    animation: tremidinha 2s infinite;
+
+    &:hover {
+      animation: tuttut 0.4s infinite;
+      color: white;
+    }
+  }
+
+  .clear-button {
+    width: 150px !important;
+    margin-right: 30px;
+  }
+}
+
+@keyframes tuttut {
+  0% {
+    background-color: rgba($color: aliceblue, $alpha: 0.8);
+  }
+  25% {
+    background-color: rgba($color: rgb(36, 234, 56), $alpha: 0.8);
+  }
+  50% {
+    background-color: rgba($color: rgb(3, 7, 255), $alpha: 0.8);
+  }
+  100% {
+    background-color: rgba($color: rgb(241, 19, 19), $alpha: 0.8);
+  }
+}
+
+@keyframes tremidinha {
+  10%, 90% {
+    transform: translate3d(-1px, 2px, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, -1px, -2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 1px, 0px);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, -1px, 3px);
+  }
+}

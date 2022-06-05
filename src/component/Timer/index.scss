@@ -1,0 +1,36 @@
+.timer-container {
+  width: 100%;
+
+  .timer {
+    color: #2a9d8f;
+  }
+
+  .load-container {
+    align-items: center;
+    display: flex;
+    background-color: rgb(173, 190, 184);
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+  
+    .load-bar {
+      background-color: rgb(0, 255, 34);
+      border-radius: 8px;
+      height: 25px;
+      width: 100%;
+      animation: loading 31s;
+    }
+  }
+  
+  @keyframes loading {
+    0% {
+      width: 100%;
+    }
+    100% {
+      background-color: rgb(255, 0, 0);
+      width: 0%;
+    }
+  }
+}
